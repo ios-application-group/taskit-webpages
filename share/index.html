@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share TaskIt</title>
+  <style>
+    :root {
+      --bg-color: #f4f4f4; --card-bg: #fff; --accent: #3b82f6;
+      --text-color: #1f2937; --subtle-text: #6b7280; --border-color: #e5e7eb;
+    }
+    body {
+      margin: 0; padding: 1rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color); color: var(--text-color);
+    }
+    .container { max-width: 600px; margin: 0 auto; text-align: center; padding-top: 2rem;}
+    h1 { margin-bottom: 0.5rem; }
+    p { color: var(--subtle-text); margin-bottom: 2rem; }
+    .share-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+    .share-btn {
+      padding: 1rem; border-radius: 12px; color: white;
+      text-decoration: none; font-weight: bold; display: flex;
+      align-items: center; justify-content: center;
+    }
+    .share-btn.twitter { background-color: #000; } /* X / Twitter */
+    .share-btn.facebook { background-color: #1877f2; }
+    .share-btn.whatsapp { background-color: #25d366; }
+    .share-btn.copy { background-color: var(--subtle-text); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Share the Love! ❤️</h1>
+    <p>Help your friends and family get organized by sharing TaskIt with them.</p>
+
+    <div class="share-grid">
+      <!-- These links use URL parameters for real sharing -->
+      <a href="https://twitter.com/intent/tweet?text=Check%20out%20TaskIt!%20The%20best%20task%20manager%20app." target="_blank" class="share-btn twitter">𝕏 Share on X</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://taskitapp.fake" target="_blank" class="share-btn facebook">f Share on Facebook</a>
+      <a href="https://api.whatsapp.com/send?text=Hey!%20You%20should%20try%20TaskIt:%20https://taskitapp.fake" target="_blank" class="share-btn whatsapp">💬 WhatsApp</a>
+      <a href="javascript:alert('Link copied!')" class="share-btn copy">🔗 Copy Link</a>
+    </div>
+  </div>
+</body>
+</html>
