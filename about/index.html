@@ -5,7 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>To-Do App Info</title>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    if (new URLSearchParams(window.location.search).get('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
   <style>
     :root {
       --bg-color: white;
@@ -15,7 +19,7 @@
       --border-color: #3c3836;
     }
 
-    body.dark {
+    html.dark {
       --bg-color: #1e1e1e;
       --text-color: #eee;
       --heading-color: #fabd2f;
@@ -172,16 +176,16 @@
 
   <script>
     function toggleTheme() {
-      $('body').toggleClass('dark');
-      $('#themeSwitch').prop('checked', $('body').hasClass('dark'));
+      document.documentElement.classList.toggle('dark');
+      document.getElementById('themeSwitch').checked = document.documentElement.classList.contains('dark');
     }
 
-    $(function () {
+    document.addEventListener('DOMContentLoaded', function () {
       const params = new URLSearchParams(window.location.search);
       const isDark = params.get('theme') === 'dark';
 
-      $('body').toggleClass('dark', isDark);
-      $('#themeSwitch').prop('checked', isDark);
+      document.documentElement.classList.toggle('dark', isDark);
+      document.getElementById('themeSwitch').checked = isDark;
     });
   </script>
 </body>
