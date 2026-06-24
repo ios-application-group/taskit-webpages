@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Help Center</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <style>
     :root {
       --bg-color: #f4f4f4; --card-bg: #fff; --accent: #3b82f6;
       --text-color: #1f2937; --subtle-text: #6b7280; --border-color: #e5e7eb;
+    }
+    body.dark {
+      --bg-color: #111827; --card-bg: #1f2937; --accent: #60a5fa;
+      --text-color: #f9fafb; --subtle-text: #d1d5db; --border-color: #374151;
     }
     body {
       margin: 0; padding: 1rem;
@@ -21,8 +26,9 @@
       border-radius: 12px; padding: 2rem 1rem; margin-bottom: 2rem;
     }
     .flow-step {
-      display: inline-block; background: #e0f2fe; color: #0284c7;
+      display: inline-block; background: var(--card-bg); color: var(--accent);
       padding: 1rem; border-radius: 8px; font-weight: bold; width: 120px;
+      border: 1px solid var(--border-color);
       margin: 0.5rem;
     }
     .arrow { font-size: 1.5rem; color: #9ca3af; margin: 0.5rem; vertical-align: middle; }
@@ -56,5 +62,11 @@
       <p style="margin-top: 1rem; font-size: 0.9rem;">Enhance each check item by defining exactly when it's due, how important it is, and what context you need.</p>
     </div>
   </div>
+  <script>
+    $(function () {
+      const params = new URLSearchParams(window.location.search);
+      $('body').toggleClass('dark', params.get('theme') === 'dark');
+    });
+  </script>
 </body>
 </html>

@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What's New</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <style>
     :root {
       --bg-color: #f4f4f4;
@@ -13,6 +14,15 @@
       --text-color: #1f2937;
       --subtle-text: #6b7280;
       --border-color: #e5e7eb;
+    }
+
+    body.dark {
+      --bg-color: #111827;
+      --card-bg: #1f2937;
+      --accent: #60a5fa;
+      --text-color: #f9fafb;
+      --subtle-text: #d1d5db;
+      --border-color: #374151;
     }
 
     body {
@@ -175,6 +185,12 @@
       Thanks for using our app! ❤️ Stay tuned for more updates.
     </div>
   </div>
+  <script>
+    $(function () {
+      const params = new URLSearchParams(window.location.search);
+      $('body').toggleClass('dark', params.get('theme') === 'dark');
+    });
+  </script>
 </body>
 
 </html>
