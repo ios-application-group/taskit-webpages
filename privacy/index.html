@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy</title>
+  <script>
+    if (new URLSearchParams(window.location.search).get('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --card-bg: #fff;
+      --accent: #3b82f6;
+      --text-color: #1f2937;
+      --subtle-text: #6b7280;
+      --border-color: #e5e7eb;
+    }
+    html.dark {
+      --bg-color: #111827;
+      --card-bg: #1f2937;
+      --accent: #60a5fa;
+      --text-color: #f9fafb;
+      --subtle-text: #d1d5db;
+      --border-color: #374151;
+    }
+    body {
+      margin: 0;
+      padding: 1rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2rem 0 3rem;
+    }
+    h1, h2 {
+      color: var(--accent);
+    }
+    h1 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.5rem 1.25rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    p, li {
+      color: var(--subtle-text);
+      line-height: 1.7;
+    }
+    ul {
+      padding-left: 1.3rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .footer-links {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+
+    <div class="card">
+      <p>TaskDit is an offline-first personal productivity app designed to help users manage tasks, boards, checklists, and daily routines. At this time, the app does not rely on a public backend or centralized account system. This Privacy Policy explains how personal information is handled in the context of an app that may later support user-specific sign-in options, such as Apple sign-in, and future sync features through Apple services like iCloud.</p>
+
+      <h2>1. Information We Collect</h2>
+      <p>Because the app is currently designed as a personal offline tool, it generally stores information locally on the device. This may include:</p>
+      <ul>
+        <li>Tasks, notes, lists, boards, priorities, and schedules created by the user.</li>
+        <li>App preferences, settings, and local usage data needed to improve usability.</li>
+        <li>Limited technical information such as device type, app version, or diagnostics needed for troubleshooting.</li>
+        <li>Any information provided by the user during future account-related features, if such features are added later.</li>
+      </ul>
+
+      <h2>2. How We Use Information</h2>
+      <p>We use information to:</p>
+      <ul>
+        <li>Provide the core task and checklist experience.</li>
+        <li>Save and organize the user’s personal content locally.</li>
+        <li>Improve reliability, fix issues, and enhance the product experience.</li>
+        <li>Support future user-specific features, including optional sign-in and cloud-based sync if introduced later.</li>
+      </ul>
+
+      <h2>3. No Central Backend</h2>
+      <p>At present, the app is intended to function without a backend service or shared user database. Data is primarily kept on the user’s device. Any future sync or account-related functionality, including Apple login or iCloud-based syncing, would be subject to the relevant platform policies and any future changes to this policy.</p>
+
+      <h2>4. Data Storage & Security</h2>
+      <p>We aim to protect locally stored user data using reasonable security practices. Since the app is user-specific and offline-first, personal task information is expected to remain under the user’s control unless a future feature such as Apple sign-in or cloud sync is enabled. Users should still protect their devices and avoid storing sensitive personal information that they do not want on the device.</p>
+
+      <h2>5. Apple Services and Future Sync</h2>
+      <p>If the app later supports Apple login, iCloud, or similar platform features, those services may process information according to Apple’s policies and the user’s consent. The app does not currently operate a separate user account system or server-side database.</p>
+
+      <h2>6. Third-Party Services</h2>
+      <p>Any third-party services used for analytics, support, hosting, or distribution are limited to what is necessary for the project. These services, if used, may have their own privacy policies, and users are encouraged to review them where relevant.</p>
+
+      <h2>7. Cookies & Web Data</h2>
+      <p>Our website pages may use cookies, local storage, or other browser-based technologies to remember preferences or improve usability. These are generally limited to website functionality and not a replacement for a user account system.</p>
+
+      <h2>8. Your Choices</h2>
+      <p>You can manage what information you store locally in the app, update settings, and choose whether to use optional account-based features in the future. If Apple login or cloud sync is added later, those features may include additional choices and controls governed by the relevant platform.</p>
+
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy over time as the app evolves. Continued use of the product after changes are made indicates acceptance of the updated policy.</p>
+
+      <h2>10. Contact</h2>
+      <p>If you have questions about this Privacy Policy, please review the contact page or other project pages to understand the app and its intended use. This project is a personal productivity tool, not a shared online platform.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="../about/">About</a> ·
+      <a href="../terms/">Terms & Conditions</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const params = new URLSearchParams(window.location.search);
+      document.documentElement.classList.toggle('dark', params.get('theme') === 'dark');
+    });
+  </script>
+</body>
+</html>

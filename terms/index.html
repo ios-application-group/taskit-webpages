@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions</title>
+  <script>
+    if (new URLSearchParams(window.location.search).get('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --card-bg: #fff;
+      --accent: #3b82f6;
+      --text-color: #1f2937;
+      --subtle-text: #6b7280;
+      --border-color: #e5e7eb;
+    }
+    html.dark {
+      --bg-color: #111827;
+      --card-bg: #1f2937;
+      --accent: #60a5fa;
+      --text-color: #f9fafb;
+      --subtle-text: #d1d5db;
+      --border-color: #374151;
+    }
+    body {
+      margin: 0;
+      padding: 1rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2rem 0 3rem;
+    }
+    h1, h2 {
+      color: var(--accent);
+    }
+    h1 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.5rem 1.25rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    p, li {
+      color: var(--subtle-text);
+      line-height: 1.7;
+    }
+    ul {
+      padding-left: 1.3rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .footer-links {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Terms & Conditions</h1>
+
+    <div class="card">
+      <p>Welcome to TaskDit. These Terms & Conditions explain the basic rules for using this project, website, and related app experience. TaskDit is currently an offline-first personal productivity tool intended for organizing tasks, boards, checklists, and daily routines. By using the app or visiting the related pages, you agree to these terms.</p>
+
+      <h2>1. Project Overview</h2>
+      <p>TaskDit is designed as a personal task management application for planning and organization. It may later include optional user-specific features such as Apple sign-in and cloud-based syncing through Apple services, but there is currently no public backend or shared account system. For context about the app and its purpose, please review the other pages on this website.</p>
+
+      <h2>2. Acceptable Use</h2>
+      <p>You agree to use the project responsibly and lawfully. You may not:</p>
+      <ul>
+        <li>Use the app for unlawful, harmful, abusive, or deceptive activities.</li>
+        <li>Attempt to interfere with the app’s stability, security, or proper operation.</li>
+        <li>Store or share content that violates rights, privacy, or local laws.</li>
+      </ul>
+
+      <h2>3. User Content</h2>
+      <p>You remain responsible for all content you create in the app, including tasks, notes, boards, checklists, and personal data. This project is intended for personal use and does not provide a shared collaborative platform by default.</p>
+
+      <h2>4. Offline-first Nature</h2>
+      <p>TaskDit is designed primarily to work offline and locally on the user’s device. Because the app is not currently dependent on a centralized server, the service may not be available in the same way as a web platform with live infrastructure. Data availability may depend on the user’s device, local storage, and any future sync features that are added.</p>
+
+      <h2>5. Future Apple Sign-In & Sync</h2>
+      <p>If Apple sign-in, iCloud syncing, or similar services are introduced later, those features will be subject to the relevant platform terms, user consent, and separate policies. At present, no backend account system is required for normal local use of the app.</p>
+
+      <h2>6. Service Availability</h2>
+      <p>We aim to keep the app functional and updated, but we do not guarantee uninterrupted availability, zero downtime, or permanent access to every feature. Updates, maintenance, or future product changes may affect functionality.</p>
+
+      <h2>7. Intellectual Property</h2>
+      <p>The project’s name, branding, design, and related materials are intended for the project’s use and development. Unless otherwise stated, all rights remain with the project owner or contributors. You agree not to copy, republish, or distribute protected materials without permission.</p>
+
+      <h2>8. Limitation of Liability</h2>
+      <p>The app is provided “as is,” without warranties of uninterrupted operation, data preservation, or specific results. We are not liable for indirect, incidental, or consequential damages that may arise from using the app, to the extent permitted by law.</p>
+
+      <h2>9. Changes to These Terms</h2>
+      <p>These Terms & Conditions may change over time as the app evolves, especially if future account or sync services are added. Continued use of the app after updates means you accept the revised terms.</p>
+
+      <h2>10. Contact</h2>
+      <p>If you have questions, please use the contact page or the project support channels listed on this website. The app is intended as a personal productivity tool and not a commercial shared platform.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="../about/">About</a> ·
+      <a href="../privacy/">Privacy Policy</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const params = new URLSearchParams(window.location.search);
+      document.documentElement.classList.toggle('dark', params.get('theme') === 'dark');
+    });
+  </script>
+</body>
+</html>
